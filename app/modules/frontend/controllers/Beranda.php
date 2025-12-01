@@ -12,7 +12,7 @@ class Beranda extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model(['Beranda_model', 'Kamar_model', 'Reservasi_model']);
+		$this->load->model(['Beranda_model', 'Kamar_model', 'Reservasi_model', 'Gallery_model']);
 		$this->load->helper(['url', 'form']);
 		$this->load->library(['session', 'form_validation']);
 	}
@@ -22,15 +22,26 @@ class Beranda extends CI_Controller
 	 */
 	public function index()
 	{
+		// ambil layanan
+		$extra_services = $this->Beranda_model->get_all_extra_services();
+
+		// ambil fitur layanan
+		foreach ($extra_services as $s) {
+			$s->fitur = $this->Beranda_model->get_features_by_service($s->id);
+		}
+
 		$data = [
 			'title' => 'Beranda',
 			'all_tipe_kamar' => $this->Beranda_model->get_all_tipe_kamar_with_features(),
 			'all_amenities' => $this->Beranda_model->get_all_amenities_by_hotel(1),
-			'room_min_price' => $this->Beranda_model->get_min_room_price()
+			'room_min_price' => $this->Beranda_model->get_min_room_price(),
+			'extra_services' => $extra_services,   // ⬅ FIX paling penting
+			'testimonials' => $this->Beranda_model->get_testimonials()
 		];
 
 		$this->_load_template('beranda', $data);
 	}
+
 
 	/**
 	 * Detail fasilitas hotel
@@ -182,6 +193,26 @@ class Beranda extends CI_Controller
 		$this->_load_template('room_detail', $data);
 	}
 
+	public function room()
+	{
+		$data = [
+			'title' => 'Beranda',
+			'all_tipe_kamar' => $this->Beranda_model->get_all_tipe_kamar_with_features(),
+			'all_amenities' => $this->Beranda_model->get_all_amenities_by_hotel(1),
+			'room_min_price' => $this->Beranda_model->get_min_room_price(),
+		];
+		$this->_load_template('room', $data);
+	}
+
+	// Halaman galeri
+	public function gallery()
+	{
+		$data = [
+			'title' => 'Gallery',
+			'all_gallery' => $this->Gallery_model->get_all_gallery()
+		];
+		$this->_load_template('gallery', $data);
+	}
 	/**
 	 * Helper untuk memuat template (header + footer)
 	 */
@@ -191,4 +222,7 @@ class Beranda extends CI_Controller
 		$this->load->view($view, $data);
 		$this->load->view('frontend/footer');
 	}
+	/**
+	 * Halaman daftar kamar
+	 */
 }

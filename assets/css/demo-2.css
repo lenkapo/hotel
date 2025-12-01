@@ -110,7 +110,7 @@
   z-index: 100;
 }
 .header-fixed ul.navbar-nav li.nav-item a.nav-link::before {
-  bottom: -7px;
+  bottom: -2px;
 }
 .header-fixed ul.navbar-nav .dropdown:hover .dropdown-menu {
   margin-top: 7px;
@@ -205,7 +205,7 @@ ul.navbar-nav li.nav-item a.nav-link::before {
   content: "";
   position: absolute;
   top: auto;
-  bottom: -13px;
+  bottom: -2px;
   height: 2px;
   width: 0;
   background: #ed5b31;
@@ -2786,11 +2786,6 @@ section {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.lh-testimonials .lh-testimonials-side-image img {
-  width: 70px !important;
-  height: 70px !important;
-  opacity: 0.4;
-}
 
 .testimonials.svg-img {
   width: 70px !important;
@@ -2843,113 +2838,6 @@ section {
 .slick-slider {
   margin-bottom: 0px;
 }
-
-.section-testimonials {
-  position: relative;
-}
-.section-testimonials button.slick-next {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border-radius: 15px;
-}
-.section-testimonials button.slick-prev {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border-radius: 15px;
-  z-index: 5;
-}
-.section-testimonials button.slick-prev,
-.section-testimonials button.slick-next {
-  border: 0;
-  font-size: 0 !important;
-}
-.section-testimonials button.slick-prev .prev-slick-arrow,
-.section-testimonials button.slick-prev .next-slick-arrow,
-.section-testimonials button.slick-next .prev-slick-arrow,
-.section-testimonials button.slick-next .next-slick-arrow {
-  display: none !important;
-  font-size: 0 !important;
-}
-
-.prev-slick-img {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border-radius: 15px;
-  z-index: 5;
-}
-.prev-slick-img img {
-  width: 275px;
-  border-radius: 15px;
-}
-.prev-slick-img::after {
-  content: "";
-  width: 235px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border: 1px solid #ed5b31;
-  border-radius: 15px;
-  margin: 20px;
-}
-
-.slick-prev,
-.slick-next {
-  z-index: 100;
-}
-.slick-prev img,
-.slick-next img {
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-}
-.slick-prev:hover img,
-.slick-next:hover img {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
-}
-
-.next-slick-img {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border-radius: 15px;
-}
-.next-slick-img img {
-  width: 275px;
-  border-radius: 15px;
-}
-.next-slick-img::after {
-  content: "";
-  width: 235px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border: 1px solid #ed5b31;
-  border-radius: 15px;
-  margin: 20px;
-}
-
-.align-self-center {
-  margin: auto;
-  display: block;
-}
-
 /*  Blog */
 .section-blog .blog-card:hover figure:before {
   -webkit-animation: shine 0.75s;
@@ -3375,18 +3263,6 @@ section {
     width: 50px !important;
     height: 50px !important;
   }
-  .prev-slick-img img {
-    width: 257px;
-  }
-  .prev-slick-img::after {
-    width: 217px;
-  }
-  .next-slick-img img {
-    width: 257px;
-  }
-  .next-slick-img::after {
-    width: 217px;
-  }
   .lh-blog .lh-read-button {
     padding-top: 24px;
   }
@@ -3689,4 +3565,103 @@ section {
     letter-spacing: 0.5rem;
   }
 }
+/* Gallery-2 */
+.section-gallery-2 .magnific-img {
+    margin-bottom: 24px;
+}
+
+.lh-gallery-second {
+    display: block;
+    position: relative;
+}
+
+.lh-gallery-second .magnific-img {
+    overflow: hidden;
+    position: relative;
+}
+
+.lh-gallery-second .magnific-img:before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    transform: skewX(-25deg);
+}
+
+.lh-gallery-second .magnific-img:hover:before {
+    animation: shine 0.75s;
+}
+
+.lh-gallery-second .magnific-img:hover .gallery-img:before,
+.lh-gallery-second .magnific-img:hover .gallery-img:after {
+    opacity: 1;
+}
+
+.lh-gallery-second .magnific-img .gallery-img:before {
+    transition: all 0.5s ease;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .7);
+    opacity: 0;
+    border-radius: 2px;
+}
+
+.lh-gallery-second .magnific-img .gallery-img:after {
+    transition: all 0.5s ease;
+    content: "\f0d1";
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    z-index: 3;
+    font-size: 25px;
+    font-family: remixicon !important;
+    opacity: 0;
+}
+
+.lh-gallery-second {
+    margin: auto;
+    max-width: 450px;
+}
+
+.lh-gallery-second img {
+    width: 100%;
+    border-radius: 2px;
+}
+
+.lh-gallery-second .lh-gallery-in img {
+    width: 100%;
+    height: 270px;
+    border-radius: 2px;
+}
+
+.lh-gallery-second .lh-gallery-in img:hover {
+    opacity: 1;
+}
+
+.lh-gallery-second .lh-gallery-in:last-child {
+    padding-top: 30px;
+}
+
+/* Shine Animation */
+@keyframes shine {
+    0% { left: -75%; }
+    100% { left: 150%; }
+}
+
 /*# sourceMappingURL=demo-2.css.map */

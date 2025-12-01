@@ -15,7 +15,7 @@
 	<meta name="description" content="Best Luxurious Hotel Booking Template.">
 	<meta name="keywords"
 		content="hotel, booking, business, restaurant, spa, resort, landing, agency, corporate, start up, site design, new business site, business template, professional template, classic, modern">
-	<title>Luxurious - Hotel Booking HTML Template</title>
+	<title>Luxurious - Hotel Booking</title>
 
 	<link rel="icon" href="assets/img/favicons/favicon-2.png" type="image/x-icon">
 
@@ -69,25 +69,25 @@
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 								<!-- HOME -->
-								<li class="nav-item">
-									<a class="nav-link <?= ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'beranda') ? 'active' : ''; ?>"
-										href="<?= site_url('beranda'); ?>">
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle <?= ($this->uri->segment(1) == '' || $this->uri->segment(1) == 'beranda') ? 'active' : ''; ?>"
+										href="<?= site_url('/'); ?>">
 										Home
 									</a>
 								</li>
 
-								<!-- CATEGORY -->
-								<li class="nav-item">
-									<a class="nav-link <?= ($this->uri->segment(1) == 'category') ? 'active' : ''; ?>"
-										href="<?= site_url('category'); ?>">
-										Category
+								<!-- Gallery -->
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle <?= ($this->uri->segment(1) == 'gallery') ? 'active' : ''; ?>"
+										href="<?= site_url('gallery'); ?>">
+										Gallery
 									</a>
 								</li>
 
 								<!-- ROOM -->
-								<li class="nav-item">
-									<a class="nav-link <?= ($this->uri->segment(1) == 'room' || $this->uri->segment(1) == 'rooms') ? 'active' : ''; ?>"
-										href="<?= site_url('rooms'); ?>">
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle <?= ($this->uri->segment(1) == 'room' || $this->uri->segment(1) == 'room') ? 'active' : ''; ?>"
+										href="<?= site_url('room'); ?>">
 										Room
 									</a>
 								</li>

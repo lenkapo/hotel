@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2025 at 12:32 AM
+-- Generation Time: Dec 01, 2025 at 12:21 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -339,6 +339,61 @@ CREATE TABLE `detail_reservasi` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `extra_services`
+--
+
+CREATE TABLE `extra_services` (
+  `id` int(11) NOT NULL,
+  `nama_layanan` varchar(255) NOT NULL,
+  `harga` int(11) NOT NULL,
+  `gambar` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `extra_services`
+--
+
+INSERT INTO `extra_services` (`id`, `nama_layanan`, `harga`, `gambar`) VALUES
+(1, 'Standard Room', 50, '1.jpg'),
+(2, 'Deluxe Room', 75, '2.jpg'),
+(3, 'Premium Suite', 99, '3.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `extra_service_features`
+--
+
+CREATE TABLE `extra_service_features` (
+  `id` int(11) NOT NULL,
+  `service_id` int(11) NOT NULL,
+  `fitur` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `extra_service_features`
+--
+
+INSERT INTO `extra_service_features` (`id`, `service_id`, `fitur`) VALUES
+(1, 1, 'Bed & Breakfast'),
+(2, 1, 'Home Made Food'),
+(3, 1, 'Tour Guide'),
+(4, 1, 'Safety & Security'),
+(5, 1, 'Local Heritage'),
+(6, 2, 'Bed & Breakfast'),
+(7, 2, 'Home Made Food'),
+(8, 2, 'Airport Pickup'),
+(9, 2, 'Free Massage'),
+(10, 2, 'Private Balcony'),
+(11, 3, 'King Size Bed'),
+(12, 3, 'VIP Lounge Access'),
+(13, 3, 'Personal Butler'),
+(14, 3, 'Free Spa'),
+(15, 3, 'Executive Workspace');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `fitur`
 --
 
@@ -390,6 +445,32 @@ CREATE TABLE `galeri_kamar` (
   `image_path` varchar(255) NOT NULL,
   `caption` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `description` text DEFAULT NULL,
+  `image` varchar(255) NOT NULL,
+  `tipe_kamar_id` int(11) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `title`, `description`, `image`, `tipe_kamar_id`, `created_at`) VALUES
+(1, 'Suite Room View', 'Pemandangan kamar suite', 'gallery-1.jpg', 1, '2025-12-01 06:48:57'),
+(2, 'Deluxe Room', 'Kamar deluxe dengan balkon', 'gallery-2.jpg', 1, '2025-12-01 06:48:57'),
+(3, 'Standard Room', 'Kamar standard nyaman', 'gallery-3.jpg', 1, '2025-12-01 06:48:57'),
+(4, 'Hotel Lobby', 'Lobi hotel modern', 'gallery-4.jpg', 1, '2025-12-01 06:48:57'),
+(5, 'Swimming Pool', 'Kolam renang hotel', 'gallery-5.jpg', 1, '2025-12-01 06:48:57');
 
 -- --------------------------------------------------------
 
@@ -517,18 +598,20 @@ CREATE TABLE `tamu` (
 CREATE TABLE `testimonials` (
   `id` int(11) NOT NULL,
   `nama` varchar(100) NOT NULL,
-  `komentar` text NOT NULL,
-  `rating` int(1) DEFAULT 5,
-  `created_at` datetime DEFAULT current_timestamp()
+  `asal` varchar(100) DEFAULT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  `pesan` text NOT NULL,
+  `rating` int(11) DEFAULT 5,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `testimonials`
 --
 
-INSERT INTO `testimonials` (`id`, `nama`, `komentar`, `rating`, `created_at`) VALUES
-(1, 'Andi', 'Pelayanan sangat ramah dan cepat.', 5, '2025-11-30 18:52:33'),
-(2, 'Siti', 'Kamar bersih, makanan enak!', 4, '2025-11-30 18:52:33');
+INSERT INTO `testimonials` (`id`, `nama`, `asal`, `foto`, `pesan`, `rating`, `created_at`) VALUES
+(1, 'Jenifer Brown', 'Bristol, UK', 'testi-1.jpg', '\"This is the dolor sit amet consectetur adipisicing elit...\"', 5, '2025-12-01 08:34:57'),
+(2, 'Michael Nova', 'California, USA', 'testi-1.jpg', '\"Sangat puas menginap di hotel ini, pelayanannya luar biasa...\"', 5, '2025-12-01 08:34:57');
 
 -- --------------------------------------------------------
 
@@ -540,6 +623,8 @@ CREATE TABLE `tipe_kamar` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `price` decimal(12,2) NOT NULL,
+  `capacity` int(3) NOT NULL DEFAULT 1,
+  `bed` varchar(50) NOT NULL DEFAULT 'Single',
   `main_image` varchar(255) DEFAULT NULL,
   `amenities` text DEFAULT NULL,
   `deskripsi` text DEFAULT NULL
@@ -549,11 +634,11 @@ CREATE TABLE `tipe_kamar` (
 -- Dumping data for table `tipe_kamar`
 --
 
-INSERT INTO `tipe_kamar` (`id`, `name`, `price`, `main_image`, `amenities`, `deskripsi`) VALUES
-(1, 'Standart Room', '850000.00', '10.jpg', 'TV,AC,WiFi,Breakfast', 'Kamar nyaman dengan fasilitas lengkap.'),
-(2, 'Suite Room', '1350000.00', '9.jpg', 'TV,AC,WiFi,Mini Bar,Bath Tub', 'Kamar mewah dengan ruang tamu.'),
-(3, 'Superior Room', '250000.00', '8.jpg', NULL, 'Kamar Superior'),
-(4, 'Grand Superior Room', '300000.00', '7.jpg', NULL, 'Grand Superior Room');
+INSERT INTO `tipe_kamar` (`id`, `name`, `price`, `capacity`, `bed`, `main_image`, `amenities`, `deskripsi`) VALUES
+(1, 'Standart Room', '850000.00', 1, 'Double', '10.jpg', 'TV,AC,WiFi,Breakfast', 'Kamar nyaman dengan fasilitas lengkap.'),
+(2, 'Suite Room', '1350000.00', 1, 'Single', '9.jpg', 'TV,AC,WiFi,Mini Bar,Bath Tub', 'Kamar mewah dengan ruang tamu.'),
+(3, 'Superior Room', '250000.00', 1, 'Single', '8.jpg', NULL, 'Kamar Superior'),
+(4, 'Grand Superior Room', '300000.00', 1, 'Single', '7.jpg', NULL, 'Grand Superior Room');
 
 --
 -- Indexes for dumped tables
@@ -622,6 +707,19 @@ ALTER TABLE `detail_reservasi`
   ADD KEY `id_reservasi` (`id_reservasi`);
 
 --
+-- Indexes for table `extra_services`
+--
+ALTER TABLE `extra_services`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `extra_service_features`
+--
+ALTER TABLE `extra_service_features`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `service_id` (`service_id`);
+
+--
 -- Indexes for table `fitur`
 --
 ALTER TABLE `fitur`
@@ -641,6 +739,13 @@ ALTER TABLE `fitur_kamar`
 ALTER TABLE `galeri_kamar`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_kamar` (`id_kamar`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `tipe_kamar_id` (`tipe_kamar_id`);
 
 --
 -- Indexes for table `menus`
@@ -744,6 +849,18 @@ ALTER TABLE `detail_reservasi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `extra_services`
+--
+ALTER TABLE `extra_services`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `extra_service_features`
+--
+ALTER TABLE `extra_service_features`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
 -- AUTO_INCREMENT for table `fitur`
 --
 ALTER TABLE `fitur`
@@ -760,6 +877,12 @@ ALTER TABLE `fitur_kamar`
 --
 ALTER TABLE `galeri_kamar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `menus`
@@ -821,6 +944,12 @@ ALTER TABLE `detail_reservasi`
   ADD CONSTRAINT `detail_reservasi_ibfk_1` FOREIGN KEY (`id_reservasi`) REFERENCES `reservasi` (`id`) ON DELETE CASCADE;
 
 --
+-- Constraints for table `extra_service_features`
+--
+ALTER TABLE `extra_service_features`
+  ADD CONSTRAINT `extra_service_features_ibfk_1` FOREIGN KEY (`service_id`) REFERENCES `extra_services` (`id`) ON DELETE CASCADE;
+
+--
 -- Constraints for table `fitur_kamar`
 --
 ALTER TABLE `fitur_kamar`
@@ -832,6 +961,12 @@ ALTER TABLE `fitur_kamar`
 --
 ALTER TABLE `galeri_kamar`
   ADD CONSTRAINT `galeri_kamar_ibfk_1` FOREIGN KEY (`id_kamar`) REFERENCES `tipe_kamar` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD CONSTRAINT `gallery_ibfk_1` FOREIGN KEY (`tipe_kamar_id`) REFERENCES `tipe_kamar` (`id`) ON DELETE SET NULL;
 
 --
 -- Constraints for table `reservasi`

@@ -397,118 +397,50 @@
 <section class="section-prices padding-tb-100">
 	<div class="container">
 		<div class="row">
+
 			<div class="banner" data-aos="fade-up" data-aos-duration="1000">
 				<h2>The Best <span>Extra Services</span></h2>
 				<p>Enjoy our best luxury extra service!</p>
 			</div>
-			<div class="col-lg-4 rs-pb-24">
-				<div class="lh-prices" data-aos="fade-up" data-aos-duration="1000">
-					<img src="assets/img/prices/1.jpg" alt="prices_1" class="prices-image">
-					<div class="lh-prices-out">
-						<div class="lh-prices-in">
-							<h4 class="lh-price-dollar"><span>$</span>50<code> / Per night</code></h4>
-							<h4 class="lh-prices-heading">Standard Room</h4>
-						</div>
-						<div class="lh-prices-viwe">
-							<ul>
-								<li>
-									<span>Bed & Breakfast</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Home Made Food</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Tour Guide</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Safety & security</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Local Heritage</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 rs-pb-24">
-				<div class="lh-prices" data-aos="fade-up" data-aos-duration="2000">
-					<img src="assets/img/prices/2.jpg" alt="prices_2" class="prices-image active">
-					<div class="lh-prices-out">
-						<div class="lh-prices-in">
-							<h4 class="lh-price-dollar"><span>$</span>75<code> / Per night</code></h4>
-							<h4 class="lh-prices-heading">Deluxe Room</h4>
-						</div>
-						<div class="lh-prices-viwe">
-							<ul>
-								<li>
-									<span>Bed & Breakfast</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Home Made Food</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Tour Guide</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Safety & security</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Local Heritage</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-							</ul>
+
+			<?php foreach ($extra_services as $service): ?>
+				<div class="col-lg-4 rs-pb-24">
+					<div class="lh-prices" data-aos="fade-up" data-aos-duration="1000">
+
+						<img src="<?= base_url('assets/img/room/' . $service->gambar) ?>"
+							alt="<?= $service->nama_layanan ?>"
+							class="prices-image">
+
+						<div class="lh-prices-out">
+							<div class="lh-prices-in">
+								<h4 class="lh-price-dollar">
+									<span>$</span><?= $service->harga ?>
+									<code> / Per Malam</code>
+								</h4>
+
+								<h4 class="lh-prices-heading"><?= $service->nama_layanan ?></h4>
+							</div>
+
+							<div class="lh-prices-viwe">
+								<ul>
+									<?php foreach ($service->fitur as $ft): ?>
+										<li>
+											<span><?= $ft->fitur ?></span>
+											<i class="ri-arrow-right-line"></i>
+										</li>
+									<?php endforeach; ?>
+								</ul>
+							</div>
+
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-lg-4 rs-pb-24">
-				<div class="lh-prices" data-aos="fade-up" data-aos-duration="3000">
-					<img src="assets/img/prices/3.jpg" alt="prices_3" class="prices-image">
-					<div class="lh-prices-out">
-						<div class="lh-prices-in">
-							<h4 class="lh-price-dollar"><span>$</span>99<code> / Per night</code></h4>
-							<h4 class="lh-prices-heading">Premium Suite</h4>
-						</div>
-						<div class="lh-prices-viwe">
-							<ul>
-								<li>
-									<span>Bed & Breakfast</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Home Made Food</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Tour Guide</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Safety & security</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-								<li>
-									<span>Local Heritage</span>
-									<i class="ri-arrow-right-line"></i>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
+			<?php endforeach; ?>
+
 		</div>
 	</div>
 </section>
+
 
 <!-- Video -->
 <section class="section-video v-bg padding-tb-100 p-0">
@@ -518,7 +450,7 @@
 	<div class="container" data-aos="fade-up" data-aos-duration="2000">
 		<div class="v-details">
 			<div class="banner">
-				<h2>The Best <span>Luxurious</span> Hotel In Brazil.</h2>
+				<h2>The Best <span>Luxurious</span> Hotel In Indonesia.</h2>
 				<p>This is the dolor sit amet consectetur adipisicing elit. Quasi eos ducimus magnam unde
 					fugit qui perferendis repudiandae modi officia. Quae eaque fugiat minima quasi sapiente,
 					vel</p>
@@ -534,156 +466,68 @@
 <section class="section-testimonials padding-tb-100">
 	<div class="container">
 		<div class="row">
-			<div class="lh-testimonials-banner d-none" data-aos="fade-up" data-aos-duration="1500">
-				<div class="banner">
-					<h2>What Our Client <span>Says</span></h2>
-				</div>
-			</div>
+
 			<div class="col-lg-12" data-aos="fade-up" data-aos-duration="2000">
 				<div class="lh-slider">
-					<div class="lh-slide slide-1">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-6 p-0 align-self-center">
-									<div class="lh-testimonials">
-										<div class="row">
-											<div class="lh-testimonials-contain">
-												<div class="d-flex">
-													<div class="lh-testimonials-inner">
-														<img src="assets/img/businessman/businessman-1.jpg"
-															alt="businessman" class="businessman">
-														<div class="lh-testimonials-name-detalis">
-															<h5>Jenifer Brown</h5>
-															<span>Bristol, Uk</span>
-														</div>
-													</div>
-													<div class="lh-testimonials-side-image">
-														<img src="assets/img/testimonials/quotes.svg"
-															class="testimonials svg-img" alt="quotes">
-													</div>
-												</div>
-												<p>
-													"This is the dolor sit amet consectetur adipisicing elit. Cumque
-													odit,
-													voluptatum quibusdam fugiat ratione exercitationem, voluptates
-													deserunt
-													atque sint veniam sit ducimus optio! Blanditiis earum nesciunt
-													exercitationem, animi alias ab!"
-												</p>
-												<div class="lh-testimonials-holiday">
-													<span>"Amenities At Hotel"</span>
-													<div class="lh-star">
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-													</div>
-												</div>
+
+					<?php foreach ($testimonials as $t): ?>
+
+						<div class="lh-slide slide-1">
+							<div class="row justify-content-center">
+
+								<div class="col-lg-8">
+									<div class="lh-testimonials gold-glass">
+
+										<div class="d-flex align-items-center mb-3 lh-testimonials-inner">
+
+											<?php
+											$photo = (!empty($t->foto) && file_exists(FCPATH . 'assets/img/testimonials/' . $t->foto))
+												? base_url('assets/img/testimonials/' . $t->foto)
+												: base_url('assets/img/businessman/businessman-1.jpg');
+											?>
+
+											<img src="<?= $photo ?>" class="businessman" alt="<?= $t->nama ?>">
+
+											<div class="lh-testimonials-name-detalis">
+												<h5><?= $t->nama; ?></h5>
+												<span><?= $t->asal; ?></span>
+											</div>
+
+											<div class="lh-testimonials-side-image ms-auto">
+												<img src="<?= base_url() ?>assets/img/testimonials/quotes.svg"
+													class="testimonials svg-img" alt="quotes">
 											</div>
 										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="lh-slide slide-2">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-6 p-0 align-self-center">
-									<div class="lh-testimonials">
-										<div class="row">
-											<div class="lh-testimonials-contain">
-												<div class="d-flex">
-													<div class="lh-testimonials-inner">
-														<img src="assets/img/businessman/businessman-2.jpg"
-															alt="businessman" class="businessman">
-														<div class="lh-testimonials-name-detalis">
-															<h5>John Doe</h5>
-															<span>Bristol, Uk</span>
-														</div>
-													</div>
-													<div class="lh-testimonials-side-image">
-														<img src="assets/img/testimonials/quotes.svg"
-															class="testimonials svg-img" alt="quotes">
-													</div>
-												</div>
-												<p>
-													"This is the dolor sit amet consectetur adipisicing elit. Cumque
-													odit,
-													voluptatum quibusdam fugiat ratione exercitationem, voluptates
-													deserunt
-													atque sint veniam sit ducimus optio! Blanditiis earum nesciunt
-													exercitationem, animi alias ab!"
-												</p>
-												<div class="lh-testimonials-holiday">
-													<span>"Room Service"</span>
-													<div class="lh-star">
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-													</div>
-												</div>
+
+										<p>"<?= $t->pesan ?>"</p>
+
+										<div class="lh-testimonials-holiday mt-3">
+											<span>"Guest Review"</span>
+											<div class="lh-star">
+												<?php for ($i = 1; $i <= $t->rating; $i++): ?>
+													<i class="ri-star-fill"></i>
+												<?php endfor ?>
 											</div>
 										</div>
+
 									</div>
 								</div>
+
 							</div>
 						</div>
-					</div>
-					<div class="lh-slide slide-3">
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-6 p-0 align-self-center">
-									<div class="lh-testimonials">
-										<div class="row">
-											<div class="lh-testimonials-contain">
-												<div class="d-flex">
-													<div class="lh-testimonials-inner">
-														<img src="assets/img/businessman/businessman-3.jpg"
-															alt="businessman" class="businessman">
-														<div class="lh-testimonials-name-detalis">
-															<h5>Moris Selemen</h5>
-															<span>Bristol, Uk</span>
-														</div>
-													</div>
-													<div class="lh-testimonials-side-image">
-														<img src="assets/img/testimonials/quotes.svg"
-															class="testimonials svg-img" alt="quotes">
-													</div>
-												</div>
-												<p>
-													"This is the dolor sit amet consectetur adipisicing elit. Cumque
-													odit,
-													voluptatum quibusdam fugiat ratione exercitationem, voluptates
-													deserunt
-													atque sint veniam sit ducimus optio! Blanditiis earum nesciunt
-													exercitationem, animi alias ab!"
-												</p>
-												<div class="lh-testimonials-holiday">
-													<span>"Restaurants Dessert"</span>
-													<div class="lh-star">
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-														<i class="ri-star-fill"></i>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+
+					<?php endforeach; ?>
+
 				</div>
 			</div>
+
 		</div>
 	</div>
 </section>
+
+
+
+
 
 <!-- Blog -->
 <section class="section-blog bg-gray padding-tb-100">

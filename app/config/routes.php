@@ -51,8 +51,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 $route['default_controller'] = 'frontend/Beranda';
 $route['/'] = 'frontend/Beranda/index';
-$route['facilities/(:any)'] = 'frontend/Beranda/facilities/$1';
+$route['room'] = 'frontend/Beranda/room';
+$route['gallery'] = 'frontend/Beranda/gallery';
 $route['restaurant'] = 'frontend/Beranda/restaurant';
+$route['facilities/(:any)'] = 'frontend/Beranda/facilities/$1';
 $route['room_detail/(:num)'] = 'frontend/Beranda/details/$1';
 
 $route['recovery_password'] = 'forgot_password/recov/';

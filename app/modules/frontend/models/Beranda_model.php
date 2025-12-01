@@ -35,7 +35,7 @@ class Beranda_model extends CI_Model
      */
     public function get_all_tipe_kamar_with_features()
     {
-        $this->db->select('k.id, k.name, k.price, k.main_image, k.deskripsi, GROUP_CONCAT(f.nama_fitur SEPARATOR ", ") AS fitur');
+        $this->db->select('k.id, k.name, k.price, k.bed, k.capacity, k.main_image, k.deskripsi, GROUP_CONCAT(f.nama_fitur SEPARATOR ", ") AS fitur');
         $this->db->from('tipe_kamar k');
         $this->db->join('fitur_kamar fk', 'fk.id_tipe_kamar = k.id', 'left');
         $this->db->join('fitur f', 'f.id = fk.id_fitur', 'left');
@@ -137,5 +137,39 @@ class Beranda_model extends CI_Model
             ->limit($limit)
             ->get('testimonials')
             ->result();
+    }
+
+    /* ==========================================================
+   BAGIAN 4. EXTRA SERVICES (LAYANAN TAMBAHAN)
+   ========================================================== */
+
+    public function get_all_extra_services()
+    {
+        return $this->db->order_by('harga', 'ASC')
+            ->get('extra_services')
+            ->result();
+    }
+
+    public function get_extra_service_features($service_id)
+    {
+        return $this->db->get_where('extra_service_features', [
+            'service_id' => $service_id
+        ])->result();
+    }
+
+    public function get_all_services_with_features()
+    {
+        $services = $this->get_all_extra_services();
+
+        foreach ($services as $s) {
+            $s->fitur = $this->get_extra_service_features($s->id);
+        }
+
+        return $services;
+    }
+
+    public function get_features_by_service($id)
+    {
+        return $this->db->get_where('extra_service_features', ['service_id' => $id])->result();
     }
 }

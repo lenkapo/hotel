@@ -157,4 +157,5 @@ class Kamar_model extends CI_Model
     {
         return $this->db->delete('tipe_kamar', ['id' => $id]);
     }
+    // Get all rooms with their details on view ALL ROOMS PAGE
 }
