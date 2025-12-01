@@ -1,0 +1,464 @@
+Uri: https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\css
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/lato/v25/S6u8w4BMUTPHjxsAXC-v.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\s\lato\v25\S6u8w4BMUTPHjxsAXC-v.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/lato/v25/S6u9w4BMUTPHh6UVSwiPHA.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\s\lato\v25\S6u9w4BMUTPHh6UVSwiPHA.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/lato/v25/S6uyw4BMUTPHjx4wWw.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\s\lato\v25\S6uyw4BMUTPHjx4wWw.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/lato/v25/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\s\lato\v25\S6u_w4BMUTPHjxsI5wq_Gwfo.ttf
+Content Type: font/ttf
+
+Uri: https://maps.gstatic.com/maps-api-v3/embed/js/63/1b/init_embed.js
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\maps-api-v3\embed\js\63\1b\init_embed.js
+Content Type: text/javascript
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/about.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\about.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/css/style.css
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\css\style.css
+Content Type: text/css
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/css/vendor/aos.css
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\css\vendor\aos.css
+Content Type: text/css
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/css/vendor/bootstrap.min.css
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\css\vendor\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/css/vendor/magnific-popup.css
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\css\vendor\magnific-popup.css
+Content Type: text/css
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/css/vendor/materialdesignicons.min.css
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\css\vendor\materialdesignicons.min.css
+Content Type: text/css
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/css/vendor/remixicon.css
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\css\vendor\remixicon.css
+Content Type: text/css
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/css/vendor/semantic.min.css
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\css\vendor\semantic.min.css
+Content Type: text/css
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/css/vendor/slick.min.css
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\css\vendor\slick.min.css
+Content Type: text/css
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/css/vendor/swiper-bundle.min.css
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\css\vendor\swiper-bundle.min.css
+Content Type: text/css
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/Cardo-Bold.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\Cardo-Bold.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/Cardo-Italic.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\Cardo-Italic.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/Cardo-Regular.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\Cardo-Regular.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/icon/materialdesignicons-webfont.eot?
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\icon\materialdesignicons-webfont-1.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/icon/materialdesignicons-webfont.eot?v=4.4.95
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\icon\materialdesignicons-webfont.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/icon/materialdesignicons-webfont.woff2?v=4.4.95
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\icon\materialdesignicons-webfont.woff2
+Content Type: font/woff2
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/icon/materialdesignicons-webfont.woff?v=4.4.95
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\icon\materialdesignicons-webfont.woff
+Content Type: application/font-woff
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/icon/remixicon.eot?t=1690730386070
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\icon\remixicon.eot
+Content Type: application/vnd.ms-fontobject
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/icon/remixicon.svg?t=1690730386070
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\icon\remixicon.svg
+Content Type: image/svg+xml
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/icon/remixicon.ttf?t=1690730386070
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\icon\remixicon.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/icon/remixicon.woff2?t=1690730386070
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\icon\remixicon.woff2
+Content Type: font/woff2
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/icon/remixicon.woff?t=1690730386070
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\icon\remixicon.woff
+Content Type: application/font-woff
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/Roboto-Bold.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\Roboto-Bold.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/Roboto-Light.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\Roboto-Light.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/Roboto-LightItalic.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\Roboto-LightItalic.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/Roboto-Medium.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\Roboto-Medium.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/Roboto-MediumItalic.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\Roboto-MediumItalic.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/Roboto-Regular.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\Roboto-Regular.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/Roboto-Thin.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\Roboto-Thin.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/fonts/Roboto-ThinItalic.ttf
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\fonts\Roboto-ThinItalic.ttf
+Content Type: application/x-font-ttf
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/about/about.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\about\about.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/amenities/1.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\amenities\1.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/amenities/2.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\amenities\2.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/amenities/3.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\amenities\3.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/amenities/4.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\amenities\4.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/amenities/amenities-dish-1.svg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\amenities\amenities-dish-1.svg
+Content Type: image/svg+xml
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/amenities/amenities-dish-2.svg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\amenities\amenities-dish-2.svg
+Content Type: image/svg+xml
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/amenities/amenities-dish-3.svg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\amenities\amenities-dish-3.svg
+Content Type: image/svg+xml
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/amenities/amenities-dish-4.svg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\amenities\amenities-dish-4.svg
+Content Type: image/svg+xml
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/blog/2.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\blog\2.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/blog/3.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\blog\3.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/blog/4.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\blog\4.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/blog/5.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\blog\5.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/blog/6.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\blog\6.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/businessman/businessman-1.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\businessman\businessman-1.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/businessman/businessman-2.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\businessman\businessman-2.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/businessman/businessman-3.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\businessman\businessman-3.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/favicons/favicon.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\favicons\favicon.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/hero/hero-section.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\hero\hero-section.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/logo/dribbble.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\logo\dribbble.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/logo/facebook.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\logo\facebook.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/logo/instagram.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\logo\instagram.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/logo/linkedin.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\logo\linkedin.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/logo/logo.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\logo\logo.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/logo/pinterest.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\logo\pinterest.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/logo/twitter.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\logo\twitter.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/prices/1.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\prices\1.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/prices/2.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\prices\2.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/prices/3.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\prices\3.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/room/1.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\room\1.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/room/2.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\room\2.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/room/3.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\room\3.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/room/4.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\room\4.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/room/room-1.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\room\room-1.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/room/room-2.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\room\room-2.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/room/room-3.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\room\room-3.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/room/room-4.jpg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\room\room-4.jpg
+Content Type: image/jpeg
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/skin/1.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\skin\1.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/skin/2.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\skin\2.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/skin/3.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\skin\3.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/skin/box-1.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\skin\box-1.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/skin/box-2.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\skin\box-2.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/testimonials/quotes.svg
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\testimonials\quotes.svg
+Content Type: image/svg+xml
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/theme/1.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\theme\1.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/theme/2.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\theme\2.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/theme/3.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\theme\3.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/theme/4.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\theme\4.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/theme/5.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\theme\5.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/theme/6.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\theme\6.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/theme/7.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\theme\7.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/img/theme/8.png
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\img\theme\8.png
+Content Type: image/png
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/js/main.js
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\js\main.js
+Content Type: application/x-javascript
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/js/vendor/aos.js
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\js\vendor\aos.js
+Content Type: application/x-javascript
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/js/vendor/app.js
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\js\vendor\app.js
+Content Type: application/x-javascript
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/js/vendor/bootstrap.bundle.min.js
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\js\vendor\bootstrap.bundle.min.js
+Content Type: application/x-javascript
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/js/vendor/jquery.min.js
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\js\vendor\jquery.min.js
+Content Type: application/x-javascript
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/js/vendor/magnific-popup.min.js
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\js\vendor\magnific-popup.min.js
+Content Type: application/x-javascript
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/js/vendor/particles.min.js
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\js\vendor\particles.min.js
+Content Type: application/x-javascript
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/js/vendor/semantic.min.js
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\js\vendor\semantic.min.js
+Content Type: application/x-javascript
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/js/vendor/slick.min.js
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\js\vendor\slick.min.js
+Content Type: application/x-javascript
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/assets/js/vendor/swiper-bundle.min.js
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\assets\js\vendor\swiper-bundle.min.js
+Content Type: application/x-javascript
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/blog-details.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\blog-details.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/blog.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\blog.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/checkout.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\checkout.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/contact.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\contact.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/demo-2.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\demo-2.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/facilities.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\facilities.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/faq.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\faq.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/gallery-2.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\gallery-2.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/gallery.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\gallery.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/index.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\index.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/prices.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\prices.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/restaurant.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\restaurant.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/room-2.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\room-2.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/room-details.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\room-details.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/room.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\room.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/services.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\services.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/spa.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\spa.html
+Content Type: text/html
+
+Uri: https://maraviyainfotech.com/projects/luxurious-html-v22/luxurious-html/team.html
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\projects\luxurious-html-v22\luxurious-html\team.html
+Content Type: text/html
+
+Uri: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29749.225774882685!2d72.84343101893258!3d21.245595574425934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f4fb5c0b087:0xb7aabd8a90da0679!2sMota Varachha%2C Surat%2C Gujarat!5e0!3m2!1sen!2sin!4v1690017805909!5m2!1sen!2sin
+File Name: C:\Downloaded Web Sites\maraviyainfotech.com\maps\embed.html
+Content Type: text/html
+
