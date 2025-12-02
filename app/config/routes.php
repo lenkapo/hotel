@@ -54,6 +54,8 @@ $route['/'] = 'frontend/Beranda/index';
 $route['room'] = 'frontend/Beranda/room';
 $route['gallery'] = 'frontend/Beranda/gallery';
 $route['restaurant'] = 'frontend/Beranda/restaurant';
+$route['blog'] = 'frontend/Beranda/blog';
+$route['blog_detail/(:any)'] = 'frontend/Beranda/blog_detail/$1';
 $route['facilities/(:any)'] = 'frontend/Beranda/facilities/$1';
 $route['room_detail/(:num)'] = 'frontend/Beranda/details/$1';
 

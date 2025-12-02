@@ -12,8 +12,17 @@ class Beranda extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model(['Beranda_model', 'Kamar_model', 'Reservasi_model', 'Gallery_model']);
-		$this->load->helper(['url', 'form']);
+		$this->load->model([
+			'Beranda_model',
+			'Kamar_model',
+			'Reservasi_model',
+			'Gallery_model',
+			'Post_model',
+			'Category_model',
+			'User_model',
+			'Comment_model'
+		]);
+		$this->load->helper(['url', 'form', 'text']);
 		$this->load->library(['session', 'form_validation']);
 	}
 
@@ -213,6 +222,103 @@ class Beranda extends CI_Controller
 		];
 		$this->_load_template('gallery', $data);
 	}
+
+	/**
+	 * Halaman Blog - daftar artikel
+	 */
+	public function blog()
+	{
+		// pagination setup
+		$this->load->library('pagination');
+
+		$config['base_url'] = site_url('beranda/blog');
+		$config['total_rows'] = $this->Post_model->count_posts();
+		$config['per_page'] = 5;
+		$config['uri_segment'] = 3;
+
+		// bootstrap style pagination
+		$config['full_tag_open'] = '<ul class="pagination justify-content-center">';
+		$config['full_tag_close'] = '</ul>';
+
+		$config['cur_tag_open'] = '<li class="page-item active"><span class="page-link">';
+		$config['cur_tag_close'] = '</span></li>';
+
+		$config['num_tag_open'] = '<li class="page-item"><span class="page-link">';
+		$config['num_tag_close'] = '</span></li>';
+
+		$config['next_tag_open'] = '<li class="page-item"><span class="page-link">';
+		$config['next_tag_close'] = '</span></li>';
+
+		$config['prev_tag_open'] = '<li class="page-item"><span class="page-link">';
+		$config['prev_tag_close'] = '</span></li>';
+
+		$this->pagination->initialize($config);
+
+		$page = $this->uri->segment(3, 0);
+
+		$data = [
+			'title'         => 'Blog Classic',
+			'posts'         => $this->Post_model->get_all_posts($config['per_page'], $page),
+			'categories'    => $this->Category_model->get_all_categories(),
+			'recent_posts'  => $this->Post_model->get_recent_posts(5),
+			'admin'         => $this->User_model->get_admin_profile(),
+			'post_count' => $this->Post_model->count_posts(),
+			'popular' => $this->Post_model->get_popular_posts(5),
+			'popular_tags'  => $this->Post_model->get_popular_tags(10),
+			'paging'        => $this->pagination->create_links()
+		];
+
+		$this->_load_template('blog', $data);
+	}
+
+	/**
+	 * Halaman Detail Blog
+	 */
+	public function blog_detail($slug)
+	{
+		$post = $this->Post_model->get_post_by_slug($slug);
+		$comments = $this->Comment_model->get_comments($post->id);
+
+		if (!$post) {
+			show_404();
+			return;
+		}
+
+		$data = [
+			'title'         => $post->title,
+			'post'          => $post,
+			'categories'    => $this->Category_model->get_all_categories(),
+			'recent_posts'  => $this->Post_model->get_recent_posts(5),
+			'comments'      => $comments,
+			'popular' => $this->Post_model->get_popular_posts(5),
+			'popular_tags'  => $this->Post_model->get_popular_tags(10),
+			'quotes'        => $this->Post_model->get_quotes(1),
+			'topics'        => $this->Post_model->get_top_topics(10),
+		];
+
+		$this->_load_template('blog_detail', $data);
+	}
+	public function add_comment()
+	{
+		$post_id = $this->input->post('post_id');
+		$slug    = $this->input->post('slug'); // slug dikirim dari form
+		$name    = $this->input->post('name');
+		$email   = $this->input->post('email');
+		$comment = $this->input->post('comment');
+
+		$this->load->model('Comment_model');
+
+		$this->Comment_model->insert_comment([
+			'post_id'     => $post_id,
+			'name'        => $name,
+			'email'       => $email,
+			'comment'     => $comment,
+			'created_at'  => date('Y-m-d H:i:s')
+		]);
+
+		redirect('blog_detail/' . $this->input->post('slug'), 'refresh');
+	}
+
 	/**
 	 * Helper untuk memuat template (header + footer)
 	 */

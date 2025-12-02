@@ -150,92 +150,6 @@
 	<i class="ri-arrow-up-double-line"></i>
 </a>
 
-<!-- Side-tool -->
-<div class="tool-overlay"></div>
-<div class="lh-tool">
-	<div class="lh-tool-btn">
-		<button type="button" class="btn-lh-tool result-placeholder close-tool">
-			<i class="ri-settings-line"></i>
-		</button>
-		<div class="color-variant">
-			<div class="tool-header">
-				<h5>Tools</h5>
-			</div>
-			<div class="heading">
-				<h2>Select Color</h2>
-			</div>
-			<ul class="lh-color">
-				<li class="colors c1">
-					<span class="lh-all-color"></span>
-				</li>
-				<li class="colors c2">
-					<span class="lh-all-color"></span>
-				</li>
-				<li class="colors c3">
-					<span class="lh-all-color"></span>
-				</li>
-				<li class="colors c4">
-					<span class="lh-all-color"></span>
-				</li>
-				<li class="colors c5">
-					<span class="lh-all-color"></span>
-				</li>
-				<li class="colors c6">
-					<span class="lh-all-color"></span>
-				</li>
-				<li class="colors c7">
-					<span class="lh-all-color"></span>
-				</li>
-				<li class="colors c8">
-					<span class="lh-all-color"></span>
-				</li>
-				<li class="colors c9">
-					<span class="lh-all-color"></span>
-				</li>
-				<li class="colors c10 active-colors">
-					<span class="lh-all-color"></span>
-				</li>
-			</ul>
-			<div class="heading">
-				<h2>Dark mode</h2>
-			</div>
-			<ul class="dark-mode">
-				<li class="dark">
-					<span class="lh-all-color"></span>
-				</li>
-				<li class="white active-dark-mode">
-					<span class="lh-all-color"></span>
-				</li>
-			</ul>
-			<div class="heading">
-				<h2>Skin mode</h2>
-			</div>
-			<ul class="skin-mode">
-				<li class="skin-1">
-					<span class="lh-all-color"><img src="assets/img/skin/1.png" alt="skin-1"></span>
-				</li>
-				<li class="skin-2">
-					<span class="lh-all-color"><img src="assets/img/skin/2.png" alt="skin-2"></span>
-				</li>
-				<li class="skin-3 active">
-					<span class="lh-all-color"><img src="assets/img/skin/3.png" alt="skin-3"></span>
-				</li>
-			</ul>
-			<div class="heading">
-				<h2>Border Radius Mode</h2>
-			</div>
-			<ul class="border-mode">
-				<li class="lh-radius radius-mode">
-					<span class="lh-all-color"><img src="assets/img/skin/box-1.png" alt="skin-1"></span>
-				</li>
-				<li class="lh-radius radius-mode-none active-radius">
-					<span class="lh-all-color"><img src="assets/img/skin/box-2.png" alt="skin-1"></span>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-
 <!-- Vendor JS -->
 <script src="<?= base_url('assets/js/vendor/jquery.min.js'); ?>"></script>
 <script src="<?= base_url('assets/js/vendor/swiper-bundle.min.js'); ?>"></script>
@@ -246,7 +160,7 @@
 <script src="<?= base_url('assets/js/vendor/slick.min.js'); ?>"></script>
 
 <!-- Main JS -->
-<script src="<?= base_url('assets/js/main.js'); ?>"></script>
+<script src="<?= base_url('assets/js/main.js?v=' . time()) ?>"></script>
 
 
 </body>

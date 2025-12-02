@@ -30,17 +30,15 @@
 	<link rel="stylesheet" href="<?= base_url('assets/css/vendor/slick.min.css'); ?>">
 
 	<!-- Main Style -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/demo-2.css'); ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/demo-2.css?v=' . time()) ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/gallery-2.css'); ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/blog.css?v=' . time()) ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/blog-detail.css?v=' . time()) ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/box-radius.css'); ?>" id="add_radius_mode">
 	<link rel="stylesheet" href="<?= base_url('assets/css/color-9.css'); ?>" id="add_class">
 
 	<style>
-		.nav-link.active {
-			color: #b19777 !important;
-			font-weight: 600;
-			border-bottom: 2px solid #b19777;
-			transition: all 0.3s ease;
-		}
+
 	</style>
 
 </head>
@@ -54,12 +52,12 @@
 
 	<!-- Header -->
 	<header>
-		<div class="lh-header">
+		<div class="lh-header" style="background-color: rgb(0 0 0 / 0%);">
 			<div class="container">
 				<div class="row">
 					<nav class="navbar navbar-expand-lg">
 						<a class="navbar-brand" href="index.html">
-							<img src="assets/img/logo/logo-2.png" alt="logo" class="lh-logo">
+							<img src="<?= base_url('assets/img/logo/logo-2.png"') ?>" alt=" logo" class="lh-logo">
 						</a>
 						<button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
 							data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -105,17 +103,17 @@
 								</li>
 
 								<!-- BLOG -->
-								<li class="nav-item">
-									<a class="nav-link <?= ($this->uri->segment(1) == 'blog') ? 'active' : ''; ?>"
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle <?= ($this->uri->segment(1) == 'blog') ? 'active' : ''; ?>"
 										href="<?= site_url('blog'); ?>">
 										Blog
 									</a>
 								</li>
 
 								<!-- RESTAURANT -->
-								<li class="nav-item">
-									<a class="nav-link <?= ($this->uri->segment(2) == 'restaurant') ? 'active' : ''; ?>"
-										href="<?= site_url('beranda/restaurant'); ?>">
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle <?= ($this->uri->segment(2) == 'restaurant') ? 'active' : ''; ?>"
+										href="<?= site_url('restaurant'); ?>">
 										Restaurant
 									</a>
 								</li>

@@ -1,6 +1,7 @@
 <!-- <pre><?php print_r($all_tipe_kamar); ?></pre> -->
 <!-- Hero Slider Start -->
 <section class="section lh-hero m-tb-40">
+
 	<div class="lh-main-content">
 		<!-- Hero Slider Start -->
 		<div class="lh-slider-content hero-image">
@@ -463,67 +464,58 @@
 </section>
 
 <!-- Testimonials -->
-<section class="section-testimonials padding-tb-100">
+<section class="section-testimonials v-bg padding-tb-100">
 	<div class="container">
 		<div class="row">
-
 			<div class="col-lg-12" data-aos="fade-up" data-aos-duration="2000">
-				<div class="lh-slider">
+				<!-- <button id="themeToggle" class="theme-toggle">🌙</button> -->
 
-					<?php foreach ($testimonials as $t): ?>
+				<!-- Swiper container -->
+				<div class="swiper testimonialSwiper">
 
-						<div class="lh-slide slide-1">
-							<div class="row justify-content-center">
-
-								<div class="col-lg-8">
-									<div class="lh-testimonials gold-glass">
-
-										<div class="d-flex align-items-center mb-3 lh-testimonials-inner">
-
-											<?php
-											$photo = (!empty($t->foto) && file_exists(FCPATH . 'assets/img/testimonials/' . $t->foto))
-												? base_url('assets/img/testimonials/' . $t->foto)
-												: base_url('assets/img/businessman/businessman-1.jpg');
-											?>
-
-											<img src="<?= $photo ?>" class="businessman" alt="<?= $t->nama ?>">
-
-											<div class="lh-testimonials-name-detalis">
-												<h5><?= $t->nama; ?></h5>
-												<span><?= $t->asal; ?></span>
-											</div>
-
-											<div class="lh-testimonials-side-image ms-auto">
-												<img src="<?= base_url() ?>assets/img/testimonials/quotes.svg"
-													class="testimonials svg-img" alt="quotes">
-											</div>
+					<div class="swiper-wrapper">
+						<?php foreach ($testimonials as $t):
+							$photo = (!empty($t->foto) && file_exists(FCPATH . 'assets/img/testimonials/' . $t->foto))
+								? base_url('assets/img/testimonials/' . $t->foto)
+								: base_url('assets/img/businessman/businessman-1.jpg');
+						?>
+							<div class="swiper-slide">
+								<div class="lh-testimonials">
+									<div class="mb-3 lh-testimonials-inner">
+										<div class="lh-testimonials-name-detalis">
+											<h5><?= $t->nama; ?></h5>
+											<span><?= $t->asal; ?></span>
 										</div>
-
-										<p>"<?= $t->pesan ?>"</p>
-
-										<div class="lh-testimonials-holiday mt-3">
-											<span>"Guest Review"</span>
-											<div class="lh-star">
-												<?php for ($i = 1; $i <= $t->rating; $i++): ?>
-													<i class="ri-star-fill"></i>
-												<?php endfor ?>
-											</div>
+										<div class="lh-testimonials-side-image ms-auto">
 										</div>
+									</div>
 
+									<p>"<?= $t->pesan ?>"</p>
+
+									<div class="lh-testimonials-holiday mt-3">
+										<span>"Pengunjung Review"</span>
+										<div class="lh-star">
+											<?php for ($i = 1; $i <= $t->rating; $i++): ?>
+												<i class="ri-star-fill"></i>
+											<?php endfor ?>
+										</div>
 									</div>
 								</div>
-
 							</div>
-						</div>
+						<?php endforeach; ?>
+					</div>
 
-					<?php endforeach; ?>
+					<!-- Swiper navigation -->
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
 
 				</div>
-			</div>
 
+			</div>
 		</div>
 	</div>
 </section>
+
 
 
 
@@ -591,3 +583,29 @@
 	</div>
 </section>
 <!-- end section beranda -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+	var swiper = new Swiper(".testimonialSwiper", {
+		loop: true,
+		centeredSlides: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 1,
+			},
+			992: {
+				slidesPerView: 1,
+			}
+		}
+	});
+	const toggle = document.getElementById("themeToggle");
+	toggle.addEventListener("click", () => {
+		document.body.classList.toggle("dark-mode");
+		toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+	});
+</script>
