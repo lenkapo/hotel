@@ -20,7 +20,8 @@ class Beranda extends CI_Controller
 			'Post_model',
 			'Category_model',
 			'User_model',
-			'Comment_model'
+			'Comment_model',
+			'Booking_model'
 		]);
 		$this->load->helper(['url', 'form', 'text']);
 		$this->load->library(['session', 'form_validation']);
@@ -180,16 +181,21 @@ class Beranda extends CI_Controller
 	 * Detail kamar
 	 * @param int $id
 	 */
-	public function details($id = 1)
+	public function details($id)
 	{
 		$room = $this->Beranda_model->get_room_detail($id);
+
 		if (!$room) {
 			show_404();
 		}
 
 		$room->gallery = $this->Beranda_model->get_room_gallery($id);
+
 		$room->cover_image = !empty($room->main_image)
-			? [(object)['image_path' => 'assets/hotel/hote_img/' . $room->main_image, 'caption' => $room->name . ' Cover Image']]
+			? [(object)[
+				'file_name' => $room->main_image,          // hanya nama file
+				'caption'   => $room->name . ' Cover Image'
+			]]
 			: [];
 
 		$data = [
@@ -329,6 +335,92 @@ class Beranda extends CI_Controller
 		$this->load->view('frontend/footer');
 	}
 	/**
-	 * Halaman daftar kamar
+	 * Halaman proses booking
 	 */
+
+	public function process_room_booking()
+	{
+		// 1. Simpan data tamu dulu
+		$data_tamu = [
+			'nama_tamu'     => $this->input->post('customer_name', TRUE),
+			'email'    => $this->input->post('customer_email', TRUE),
+			'no_telp'  => $this->input->post('customer_phone', TRUE),
+			'alamat'   => $this->input->post('customer_address', TRUE),
+		];
+		$this->db->insert('tamu', $data_tamu);
+		$tamu_id = $this->db->insert_id();
+		// Atur rules validasi
+		$this->form_validation->set_rules('room_id',         'Room ID',       'required|integer');
+		$this->form_validation->set_rules('check_in_date',   'Check In Date',  'required');
+		$this->form_validation->set_rules('check_out_date',  'Check Out Date', 'required');
+		$this->form_validation->set_rules('customer_email',  'Email',         'required|valid_email');
+		$this->form_validation->set_rules('guest_count',     'Jumlah Tamu',   'required|integer|greater_than[0]');
+
+		if ($this->form_validation->run() === FALSE) {
+			// Jika validasi gagal ➜ redirect kembali ke form
+			$this->session->set_flashdata('error', validation_errors());
+			redirect($_SERVER['HTTP_REFERER']);
+			return;
+		}
+
+		// Ambil data dari POST
+		$room_id      = $this->input->post('room_id', TRUE);
+		$room_name    = $this->input->post('room_name', TRUE);   // jika Anda kirim nama kamar
+		$check_in_raw  = $this->input->post('check_in_date', TRUE);
+		$check_out_raw = $this->input->post('check_out_date', TRUE);
+		$check_in  = date('Y-m-d', strtotime($check_in_raw));
+		$check_out = date('Y-m-d', strtotime($check_out_raw));
+		$email        = $this->input->post('customer_email', TRUE);
+		$guest_count  = (int) $this->input->post('guest_count', TRUE);
+
+		// Validasi logika tanggal: check-out harus setelah check-in
+		$d1 = new DateTime($check_in);
+		$d2 = new DateTime($check_out);
+		if ($d2 <= $d1) {
+			$this->session->set_flashdata('error', 'Tanggal Check-Out harus setelah Check-In.');
+			redirect($_SERVER['HTTP_REFERER']);
+			return;
+		}
+
+		// Hitung durasi malam
+		$interval = $d2->diff($d1);
+		$nights = max($interval->days, 1);
+
+		// Misalnya Anda punya harga kamar per malam — bisa Anda ambil dari model Kamar
+		// Asumsi: Anda mengirimkan harga per malam lewat form atau Anda ambil dari DB
+		$price_per_night = (float) $this->input->post('room_price', TRUE) ?? 0;
+		$total_price = $price_per_night * $nights;
+
+		// Siapkan data untuk tabel reservasi
+		$data_reservasi = [
+			'id_tamu' => $tamu_id ?? NULL, // jika Anda punya sistem user/tamu
+			'kode_reservasi'   => $this->Reservasi_model->generate_kode_reservasi(),
+			'tgl_reservasi'    => date('Y-m-d H:i:s'),
+			'check_in_date'    => $check_in,
+			'check_out_date'   => $check_out,
+			'total_biaya'      => $total_price,
+			'status_reservasi' => 'Pending'
+		];
+
+		// Siapkan data detail (jika Anda punya tabel detail_reservasi atau kolom tambahan)
+		$data_detail = [
+			'room_id'     => $room_id,
+			'room_name'   => $room_name,
+			'guest_count' => $guest_count,
+			'price_per_night' => $price_per_night,
+			'nights'         => $nights,
+			'subtotal'         => $total_price,
+		];
+
+		// Simpan ke DB lewat model — dengan transaksi jika model mendukung
+		$id_reservasi = $this->Reservasi_model->simpan_reservasi($data_reservasi, $data_detail);
+
+		if ($id_reservasi) {
+			$this->session->set_flashdata('success', 'Booking berhasil! Kode reservasi: ' . $data_reservasi['kode_reservasi']);
+			redirect('booking/confirmation/' . $data_reservasi['kode_reservasi']);
+		} else {
+			$this->session->set_flashdata('error', 'Booking gagal — silakan coba lagi.');
+			redirect($_SERVER['HTTP_REFERER']);
+		}
+	}
 }

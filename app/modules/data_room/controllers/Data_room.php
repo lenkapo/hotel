@@ -2,10 +2,10 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 /**
- * @author      Maulana Rahman <maulana.code@gmail.com>
+ * @author      Luqman Aly Razak youngsta446@gmail.com
  */
 
-class Room_detail extends CI_Controller
+class Data_room extends CI_Controller
 {
 
     public function __construct()
@@ -21,10 +21,6 @@ class Room_detail extends CI_Controller
             $head['title'] = $title_head;
             $data['title_head'] = $title_head;
 
-            /*DATA*/
-
-            /*END DATA*/
-
             $this->load->view('template/temaalus/header', $head);
             $this->load->view('index', $data);
             $this->load->view('template/temaalus/footer');
@@ -33,9 +29,7 @@ class Room_detail extends CI_Controller
         }
     }
 
-
     /*AJAX LIST*/
-
     public function ajax_list()
     {
         $list = $this->Alus_items->get_datatables();
@@ -45,14 +39,18 @@ class Room_detail extends CI_Controller
             $no++;
             $row = array();
             $row[] = $no;
-            $row[] = '<img src="' . base_url('assets/hotel/hotel_img/') . $person->main_image . '" width="200px" height="auto">';
+            $row[] = '<img src="' . base_url('assets/data_img_hotel/') . $person->main_image . '" width="200px" height="auto">';
             $row[] = $person->name;
-            $row[] = $person->description;
+            $row[] = $person->deskripsi;
             $row[] = $person->price;
             $row[] = $person->amenities;
-            $row[] = $person->max_adults;
-            $row[] = $person->max_children;
-            $row[] = $person->status;
+            $row[] = $person->bed;
+            $row[] = $person->capacity;
+            if ($person->is_active) {
+                $row[] = "<span class='label label-success'>Tersedia</span>";
+            } else {
+                $row[] = "<span class='label label-danger'>Tidak Tersedia</span>";
+            }
             $row[] = "<a href='javascript:' onClick='btn_modal_edit(" . $person->id . ")' data-toggle='tooltip' data-placement='bottom' title='Edit' class='btn btn-xs btn-flat btn-primary' style='background:#00897b'><i class='fa fa-edit'></i> Edit</a>" . "<a href='javascript:' onClick='btn_modal_delete(" . $person->id . ")' data-toggle='tooltip' data-placement='bottom' title='Delete' class='btn btn-xs btn-flat btn-danger'><i class='fa fa-trash'></i> Delete</a>";
             //add html for action
             $data[] = $row;
@@ -87,13 +85,12 @@ class Room_detail extends CI_Controller
     {
         $data = array(
             'name' => $this->input->post('name'),
-            'description' => $this->input->post('description'),
+            'deskripsi' => $this->input->post('deskripsi'),
             'price' => $this->input->post('price'),
             'amenities' => $this->input->post('amenities'),
-            'max_adults' => $this->input->post('max_adults'),
-            'max_children' => $this->input->post('max_children'),
-            'status' => $this->input->post('status'),
-            'created_at' => $this->input->post('created_at'),
+            'bed' => $this->input->post('bed'),
+            'capacity' => $this->input->post('capacity'),
+            'is_active' => $this->input->post('is_active'),
         );
 
         if (isset($_FILES['main_image']) && $_FILES['main_image']['name'] != '') {
@@ -126,62 +123,32 @@ class Room_detail extends CI_Controller
     function edit()
     {
         $data = array(
-            'title' => $this->input->post('title'),
-            'rating' => $this->input->post('rating'),
-            'is_featured' => $this->input->post('featured'),
-            'year' => $this->input->post('year'),
-            'duration' => $this->input->post('duration'),
-            'age' => $this->input->post('age'),
-            'description' => $this->input->post('description'),
-            'link_trailer' => $this->input->post('link_trailer'),
-            'created_by_user_id' => $this->session->userdata('id'),
+            'name' => $this->input->post('name'),
+            'deskripsi' => $this->input->post('deskripsi'),
+            'price' => $this->input->post('price'),
+            'amenities' => $this->input->post('amenities'),
+            'bed' => $this->input->post('bed'),
+            'capacity' => $this->input->post('capacity'),
+            'is_active' => $this->input->post('is_active'),
         );
 
-        if ($_FILES['userfile']['name'] != '') {
+        if ($_FILES['main_image']['name'] != '') {
             /*cek jika file lama ada, maka hapus */
-            if ($this->input->post('userfile_lama') != "") {
-                if (file_exists('./assets/movies/' . $this->input->post('userfile_lama'))) {
-                    unlink('assets/movies/' . $this->input->post('userfile_lama'));
+            if ($this->input->post('main_image') != "") {
+                if (file_exists('./assets/data_img_hotel/' . $this->input->post('userfile_lama'))) {
+                    unlink('assets/data_img_hotel/' . $this->input->post('userfile_lama'));
                 }
             }
             /*cek*/
 
             //--upload
-            $upload = $this->_do_upload('userfile');
+            $upload = $this->_do_upload('main_image');
             $m_file = $upload;
 
-            $data['picture'] = $m_file;
-        }
-
-        if ($_FILES['movie']['name'] != '') {
-            /*cek jika file lama ada, maka hapus */
-            if ($this->input->post('movie_lama') != "") {
-                if (file_exists('./assets/movies/' . $this->input->post('movie_lama'))) {
-                    unlink('assets/movies/' . $this->input->post('movie_lama'));
-                }
-            }
-            /*cek*/
-
-            //--upload
-            $upload = $this->_do_upload_movie('movie');
-            $m_file = $upload;
-
-            $data['file_movie'] = $m_file;
+            $data['main_image'] = $m_file;
         }
 
         $q = $this->Alus_items->edit($data);
-        if (count($this->input->post('categories[]')) > 0) {
-            $this->db->where('movie_id', $this->input->post('id'));
-            $this->db->delete('movie_categories');
-
-            foreach ($this->input->post('categories[]') as $key => $value) {
-                $inp = array(
-                    'movie_id' => $this->input->post('id'),
-                    'category_id' => $value,
-                );
-                $this->db->insert('movie_categories', $inp);
-            }
-        }
         if ($q) {
             $output = array(
                 "status" => true,
@@ -201,15 +168,11 @@ class Room_detail extends CI_Controller
     function delete($id)
     {
         $this->db->where('id', $id);
-        $dt_lama = $this->db->get('categories');
+        $dt_lama = $this->db->get('tipe_kamar');
 
         if ($dt_lama->num_rows() > 0) {
-            if (file_exists('./assets/movies/' . $dt_lama->row()->picture)) {
-                unlink('assets/movies/' . $dt_lama->row()->picture);
-            }
-
-            if (file_exists('./assets/movies/' . $dt_lama->row()->file_movie)) {
-                unlink('assets/movies/' . $dt_lama->row()->file_movie);
+            if (file_exists('./assets/data_img_hotel/' . $dt_lama->row()->main_image)) {
+                unlink('assets/data_img_hotel/' . $dt_lama->row()->main_image);
             }
         }
 
@@ -232,7 +195,7 @@ class Room_detail extends CI_Controller
 
     private function _do_upload($key)
     {
-        $config['upload_path']          = './assets/hotel/hotel_img';
+        $config['upload_path']          = './assets/data_img_hotel';
         $config['allowed_types']        = '*';
         $config['max_size']             = 10000; //set max size allowed in Kilobyte
         $config['file_name']            = round(microtime(true) * 100); //just milisecond timestamp fot unique name
@@ -248,13 +211,13 @@ class Room_detail extends CI_Controller
             $gbr = $this->upload->data();
             //Compress Image
             $config['image_library'] = 'gd2';
-            $config['source_image'] = './assets/hotel/hotel_img' . $gbr['file_name'];
+            $config['source_image'] = './assets/data_img_hotel' . $gbr['file_name'];
             $config['create_thumb'] = FALSE;
             $config['maintain_ratio'] = FALSE;
             $config['quality'] = '100%';
             $config['width'] = 400;
             $config['height'] = 600;
-            $config['new_image'] = './assets/hotel/hotel_img' . $gbr['file_name'];
+            $config['new_image'] = './assets/data_img_hotel' . $gbr['file_name'];
             $this->load->library('image_lib', $config);
             $this->image_lib->resize();
             return $gbr['file_name'];
@@ -263,7 +226,7 @@ class Room_detail extends CI_Controller
 
     private function _do_upload_movie($key)
     {
-        $config['upload_path']          = './assets/hotel/hotel_img';
+        $config['upload_path']          = './assets/data_img_hotel';
         $config['allowed_types']        = '*';
         $config['max_size']             = 100000000000; //set max size allowed in Kilobyte
         $config['file_name']            = "Hotel_" . round(microtime(true) * 100); //just milisecond timestamp fot unique name

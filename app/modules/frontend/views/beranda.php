@@ -165,7 +165,7 @@
 					<?php foreach ($all_tipe_kamar as $room): ?>
 						<div class="rooms-card">
 							<!-- Gambar kamar -->
-							<img src="<?= base_url('assets/img/room/' . $room->main_image); ?>"
+							<img src="<?= base_url('assets/data_img_hotel/' . $room->main_image); ?>"
 								alt="<?= htmlspecialchars($room->name); ?>">
 
 							<div class="details">
@@ -188,7 +188,7 @@
 									<?php endif; ?>
 								</ul>
 
-								<a href="<?= site_url('beranda/details/' . $room->id); ?>" class="lh-buttons-2">
+								<a href="<?= site_url('room_detail/' . $room->id); ?>" class="lh-buttons-2">
 									View More <i class="ri-arrow-right-line"></i>
 								</a>
 							</div>

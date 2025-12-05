@@ -25,12 +25,12 @@
             <tr>
               <th width="1%">No</th>
               <th>Picture</th>
-              <th>Room Name</th>
-              <th>Deskripsi</th>
-              <th>Harga</th>
-              <th>Fasilitas</th>
-              <th>Maksimal Dewasa</th>
-              <th>Maksimal Anak</th>
+              <th width="10%">Room Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Fasilities</th>
+              <th>Bed</th>
+              <th>Capacity</th>
               <th>Status</th>
               <th width="100px">Tools</th>
             </tr>
@@ -101,7 +101,7 @@
           "className": "text-center",
         },
         {
-          "targets": [0, 3, 4, 5],
+          "targets": [0, 1, 4, 5],
           "className": "text-center",
         },
       ],

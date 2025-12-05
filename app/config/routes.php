@@ -59,6 +59,9 @@ $route['blog_detail/(:any)'] = 'frontend/Beranda/blog_detail/$1';
 $route['facilities/(:any)'] = 'frontend/Beranda/facilities/$1';
 $route['room_detail/(:num)'] = 'frontend/Beranda/details/$1';
 
+$route['process_room_booking'] = 'frontend/Beranda/process_room_booking';
+$route['beranda/process_room_booking'] = 'frontend/Beranda/process_room_booking';
+
 $route['recovery_password'] = 'forgot_password/recov/';
 $route['404_override'] = 'dashboard/error404/';
 $route['translate_uri_dashes'] = FALSE;

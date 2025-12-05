@@ -7,7 +7,7 @@
   </div>
   <div class="modal-body">
     <!-- FORM -->
-    <form id="form_add">
+    <form id="form_add" enctype="multipart/form-data">
       <!-- KONTEN -->
       <input type="hidden" name="<?= $this->security->get_csrf_token_name(); ?>" value="<?= $this->security->get_csrf_hash(); ?>" />
       <div class="form-group">
@@ -16,7 +16,7 @@
       </div>
       <div class="form-group">
         <label>Deskripsi</label>
-        <textarea name="description" class="form-control" rows="10"></textarea>
+        <textarea name="deskripsi" class="form-control" rows="10"></textarea>
       </div>
       <div class="form-group">
         <label>Harga</label>
@@ -27,12 +27,18 @@
         <input type="text" class="form-control" name="amenities">
       </div>
       <div class="form-group">
-        <label>Max Adult</label>
-        <input type="number" class="form-control" name="max_adults" min="0" max="4">
+        <label>Capacity</label>
+        <input type="number" class="form-control" name="capacity" min="0" max="4">
       </div>
       <div class="form-group">
-        <label>Max Children</label>
-        <input type="number" class="form-control" name="max_children" min="0" max="3">
+        <label>Tipe Kasur</label>
+        <select name="bed" class="form-control">
+          <option value=""><b>--- Pilih Tipe Kasur sesuaikan dengan Room --- </b></option>
+          <option value="Single Bed"><b>Single Bed</b></option>
+          <option value="Double Bed"><b>Double Bed</b></option>
+          <option value="Queen Bed"><b>Queen Bed</b></option>
+          <option value="King Bed"><b>King Bed</b></option>
+        </select>
       </div>
       <div class="form-group">
         <div class="callout callout-warning">
@@ -42,6 +48,13 @@
       <div class="form-group">
         <label>Gambar</label>
         <input type="file" name="main_image">
+      </div>
+      <div class="form-group">
+        <label>Status</label>
+        <select name="is_active" class="form-control">
+          <option value="1">Aktif</option>
+          <option value="0">Tidak Aktif</option>
+        </select>
       </div>
       <hr>
       <!-- END KONTEN -->

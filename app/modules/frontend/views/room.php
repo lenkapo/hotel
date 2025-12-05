@@ -33,13 +33,13 @@
                     <?php foreach ($all_tipe_kamar as $room) : ?>
                         <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-duration="1500">
                             <div class="rooms-card">
-                                <img src="<?= base_url('assets/img/room /' . $room->main_image); ?>" alt="<?= $room->name; ?>">
+                                <img src="<?= base_url('assets/data_img_hotel/' . $room->main_image); ?>" alt="<?= $room->name; ?>">
                                 <div class="details">
                                     <h3><?= $room->name; ?></h3>
-                                    <span>Rp <?= number_format($room->price, 0, ',', '.'); ?> / Night</span>
+                                    <span>Rp <?= number_format($room->price, 0, ',', '.'); ?> / Malam</span>
                                     <ul>
                                         <li><i class="ri-group-line"></i><?= $room->capacity; ?> Persons</li>
-                                        <li><i class="ri-hotel-bed-line"></i><?= $room->bed; ?> Bed<?= $room->bed > 1 ? 's' : ''; ?></li>
+                                        <li><i class="ri-hotel-bed-line"></i><?= $room->bed; ?><?= $room->bed > 1 ? 's' : ''; ?></li>
                                         <?php if (!empty($room->amenities)) : ?>
                                             <?php
                                             $amenities = explode(',', $room->amenities);
@@ -49,7 +49,7 @@
                                             <?php endforeach; ?>
                                         <?php endif; ?>
                                     </ul>
-                                    <a href="<?= base_url('beranda/details/' . $room->id); ?>" class="lh-buttons-2">
+                                    <a href="<?= site_url('room_detail/' . $room->id) ?>" class="lh-buttons-2">
                                         View More <i class="ri-arrow-right-line"></i>
                                     </a>
                                 </div>

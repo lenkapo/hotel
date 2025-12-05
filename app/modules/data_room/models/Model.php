@@ -3,36 +3,36 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Model extends CI_Model
 {
-    var $table = 'rooms';
+    var $table = 'tipe_kamar';
     var $idtable = 'id';
     var $column_order = array(
         'id',
         'name',
-        'description',
+        'deskripsi',
         'price',
         'main_image',
         'amenities',
-        'max_adults',
-        'max_children',
-        'status',
+        'bed',
+        'capacity',
+        'is_status',
         'created_at',
     );
     var $column_search = array(
         'id',
         'name',
-        'description',
+        'deskripsi',
         'price',
         'main_image',
         'amenities',
-        'max_adults',
-        'max_children',
-        'status',
+        'bed',
+        'capacity',
+        'is_status',
         'created_at',
     );
     var $order = array('id' => 'ASC');
 
     /* Server Side Data */
-    /* Modified by : Maulana.code@gmail.com */
+    /* Modified by : youngsta446@gmail.com */
     private function _get_datatables_query()
     {
         $this->db->from($this->table);
@@ -87,7 +87,6 @@ class Model extends CI_Model
         $this->db->from($this->table);
         return $this->db->count_all_results();
     }
-
     /* end server side  */
 
     function getid($id)

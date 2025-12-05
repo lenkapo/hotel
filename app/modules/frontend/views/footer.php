@@ -6,7 +6,7 @@
 				<div class="col-lg-4 rs-pb-24">
 					<div class="lh-social-media">
 						<div class="footer-logos">
-							<img src="assets/img/logo/logo-2.png" alt="logo">
+							<img src="<?= base_url() ?>assets/img/logo/logo-2.png" alt="logo">
 						</div>
 						<div class="lh-footer-social">
 							<p>This is the dolor sit amet consectetur adipisicing elit. Libero voluptatem soluta
@@ -23,12 +23,12 @@
 						<div class="lh-follow-social">
 							<h4 class="heading">Follow On Social</h4>
 							<div class="footer-logo-image">
-								<a href="#"><img src="assets/img/logo/facebook.png" alt="facebook"></a>
-								<a href="#"><img src="assets/img/logo/twitter.png" alt="twitter"></a>
-								<a href="#"><img src="assets/img/logo/instagram.png" alt="instagram"></a>
-								<a href="#"><img src="assets/img/logo/linkedin.png" alt="linkedin"></a>
-								<a href="#"><img src="assets/img/logo/dribbble.png" alt="dribbble"></a>
-								<a href="#"><img src="assets/img/logo/pinterest.png" alt="pinterest"></a>
+								<a href="#"><img src="<?= base_url() ?>assets/img/logo/facebook.png" alt="facebook"></a>
+								<a href="#"><img src="<?= base_url() ?>assets/img/logo/twitter.png" alt="twitter"></a>
+								<a href="#"><img src="<?= base_url() ?>assets/img/logo/instagram.png" alt="instagram"></a>
+								<a href="#"><img src="<?= base_url() ?>assets/img/logo/linkedin.png" alt="linkedin"></a>
+								<a href="#"><img src="<?= base_url() ?>assets/img/logo/dribbble.png" alt="dribbble"></a>
+								<a href="#"><img src="<?= base_url() ?>assets/img/logo/pinterest.png" alt="pinterest"></a>
 							</div>
 						</div>
 					</div>

@@ -38,7 +38,7 @@
                     <div class="lh-gallery-second" data-aos="fade-up" data-aos-duration="1500">
                         <div class="magnific-img">
                             <a class="image-popup-vertical-fit gallery-img"
-                                href="<?= base_url('assets/img/gallery/' . $g->image) ?>"
+                                href="<?= base_url('assets/data_img/gallery/' . $g->image) ?>"
                                 title="<?= $g->title ?>">
 
                                 <img src="<?= base_url('assets/img/gallery/' . $g->image) ?>"

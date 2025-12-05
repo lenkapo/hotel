@@ -30,10 +30,12 @@
 	<link rel="stylesheet" href="<?= base_url('assets/css/vendor/slick.min.css'); ?>">
 
 	<!-- Main Style -->
-	<link rel="stylesheet" href="<?= base_url('assets/css/demo-2.css?v=' . time()) ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/demo-2.css'); ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/style.css'); ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/room-detail.css'); ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/gallery-2.css'); ?>">
-	<link rel="stylesheet" href="<?= base_url('assets/css/blog.css?v=' . time()) ?>">
-	<link rel="stylesheet" href="<?= base_url('assets/css/blog-detail.css?v=' . time()) ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/blog.css'); ?>">
+	<link rel="stylesheet" href="<?= base_url('assets/css/blog-detail.css'); ?>">
 	<link rel="stylesheet" href="<?= base_url('assets/css/box-radius.css'); ?>" id="add_radius_mode">
 	<link rel="stylesheet" href="<?= base_url('assets/css/color-9.css'); ?>" id="add_class">
 
